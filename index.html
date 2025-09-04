@@ -16,14 +16,20 @@
 	<body>
 		<h1>QR Code Generator</h1>
 		<p>請在下方輸入文字，然後按下「產生QR Code」按鈕：</p>
+		<!-- 更新輸入框與按鈕的樣式 -->
 		<input
 			type="text"
 			id="qrText"
 			placeholder="輸入文字..."
-			style="width: 300px; padding: 5px" />
+			style="width: 100%; max-width: 400px; padding: 12px; font-size: 18px" />
+		<button
+			onclick="pasteToInput()"
+			style="padding: 10px 15px; font-size: 18px">
+			貼上
+		</button>
 		<button
 			onclick="generateQR()"
-			style="padding: 5px 10px">
+			style="padding: 10px 15px; font-size: 18px">
 			產生QR Code
 		</button>
 		<div id="qrcode"></div>
@@ -48,6 +54,22 @@
 					height: 200,
 				});
 				console.log('QR Code generated');
+			}
+
+			function pasteToInput() {
+				if (navigator.clipboard && navigator.clipboard.readText) {
+					navigator.clipboard
+						.readText()
+						.then(function (text) {
+							document.getElementById('qrText').value = text;
+						})
+						.catch(function (err) {
+							console.error('無法讀取剪貼簿內容: ', err);
+							alert('無法貼上內容');
+						});
+				} else {
+					alert('你的瀏覽器不支援貼上功能');
+				}
 			}
 		</script>
 	</body>
