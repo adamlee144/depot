@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>雜誌專欄 - v10 (精確版)</title>
+		<style>
+			body {
+				background-color: #e0e0e0; /* 灰色背景，以突顯紙張 */
+				font-family: 'Microsoft JhengHei', 'Heiti TC', 'LiHei Pro', sans-serif;
+				padding: 2em 0; /* 讓紙張上下有些空間 */
+			}
+			.a4-page {
+				width: 21cm; /* A4 寬度 */
+				min-height: 29.7cm; /* A4 高度 */
+				margin: 0 auto; /* 頁面置中 */
+				background: white;
+				box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.4); /* 紙張陰影 */
+				padding: 2cm 1.15cm; /* 上下邊界2cm, 左右邊界1.15cm */
+				box-sizing: border-box; /* 讓 padding 包含在 width/height 內 */
+				display: flex;
+				flex-direction: column;
+			}
+			h1 {
+				text-align: left;
+				font-size: 24pt; /* 使用印刷單位 pt */
+				margin-top: 0;
+				margin-bottom: 0.5cm;
+				color: #1a1a1a;
+			}
+			h5 {
+				text-align: left;
+				font-size: 11pt;
+				font-weight: normal;
+				color: #666;
+				margin-top: 0;
+				margin-bottom: 1cm;
+			}
+			.magazine-layout {
+				display: flex;
+				flex-direction: row;
+				gap: 1.7cm; /* 欄間距 (約4字) */
+				flex-grow: 1;
+			}
+			.column {
+				width: 8.5cm; /* 欄寬 (約20字) */
+				text-align: justify;
+				font-size: 12pt; /* 標準印刷字體大小 */
+				line-height: 1.6;
+			}
+			.column p {
+				text-indent: 1.5em; /* 段落縮排 */
+			}
+			.column img {
+				max-width: 100%;
+				height: auto;
+				margin: 0.5cm 0;
+			}
+			/* --- 列表樣式 --- */
+			.feature-list {
+				list-style: none; /* 移除前面預設的小黑點 */
+				padding-left: 1.5em; /* 讓列表縮排，與段落縮排對齊 */
+				margin: 1.5em 0;
+			}
+			.feature-list li {
+				margin-bottom: 1em; /* 增加項目之間的間距 */
+			}
+			.feature-list strong {
+				color: #005a9c; /* 使用一個沉穩的藍色來凸顯標題 */
+				font-weight: bold;
+			}
+			/* --- -------- --- */
+
+			/* 當真正執行列印時，移除模擬效果 */
+			@media print {
+				body {
+					background-color: #fff;
+					padding: 0;
+				}
+				.a4-page {
+					width: auto;
+					min-height: auto;
+					margin: 0;
+					box-shadow: none;
+					padding: 2cm 1.15cm; /* 列印時也保持此邊界 */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a4-page">
+			<h1>開車怕打盹？AI司機讓你輕鬆出行</h1>
+			<h5>文、圖/李孟穎</h5>
+			<div class="magazine-layout">
+				<div class="column">
+					<p>
+						您是否對於長途開車感到疲憊？是否在繁忙車流中，總覺得精神緊繃、壓力重重？
+						或要在鬧區找個停車位，總感到負擔？「開車」這件事，可能耗費了我們大量時間與精力。
+					</p>
+					<p>
+						不過，這些日常困擾，現在正因為科技創新而迎來改變！ 在 AI、
+						IOT、5G與感測器技術的驅動下，自動駕駛汽車正快速成為現實。它有望重新定義我們的出行方式，讓您擺脫壓力、享受自由。
+					</p>
+					<h3>☕ 「駕駛座」變身「行動休息室」</h3>
+
+					<p>
+						自駕車最直接的禮物，就是讓您彷彿有了專屬司機，把人類由重複、單調高壓的駕駛任務中解放出來。當汽車具備高階自動駕駛能力時，駕駛座將不再是需緊盯路況的勞動空間，而是能夠運用時間的個人休息室。
+					</p>
+					<ul class="feature-list">
+						<li>
+							<strong>優化您的生活：</strong>
+							<span
+								>您的通勤時間可以用來回覆郵件、整理工作事項，閱讀一本好書、追劇。您也可以閉目養神，為接下來的一天積蓄精力。</span
+							>
+						</li>
+						<li>
+							<strong>終結停車煩惱：</strong>
+							<span
+								>當AI司機送您到目的地後，不需操心停車，它會自行尋找遠處的停車位停放，並在您需要時以手機呼喚它來接，也讓城市停車空間可以重新規劃。</span
+							>
+						</li>
+					</ul>
+
+					<!-- 圖片範例 -->
+					<!-- 請將 src 中的 "your-image-path-1.jpg" 替換成您的圖片路徑 -->
+					<img
+						src="relax.jpg"
+						alt="圖片說明" />
+					<h3>🛡️ 從「人為失誤」到「數據守護」</h3>
+					<p>
+						從數據上來看，超過九成的行車事故是疲勞駕駛、分心或酒駕等人為因素造成。當 AI
+						司機成為道路上主要駕駛者，道路安全將被帶入一個全新的維度。 根據Waymo 最新的營運數據(Waymo Safety
+						Impact Hub)顯示，其自駕車系統在每行駛百萬英里中，造成人員受傷的事故率比人類駕駛低了八成以上。
+						<br /><br />「永不疲勞」與「超人類感知」
+					</p>
+					<p>
+						AI 司機不會因為昨夜失眠而疲勞遲鈍，未來其感知能力透過車聯網 (V2X)
+						技術，更能超越人類的感官極限，即使在視線之外，也能「聽見」前方車輛發出的緊急變道或剎車信號。
+						這種聯網能力也賦予 AI
+						司機類似人類聽路況廣播般，當收到前方車輛回饋的積水、施工等實時路況警示時，能夠更從容地提前調度應對潛在的道路風險。
+					</p>
+					<p>
+						由AI自駕技術驅動的車流，能消除不必要的急煞和急加速，而像和諧車隊般平順巡航。這有助於從根本上緩解擁堵，將城市交通轉變為由「數據調度」驅動的高效網路。
+					</p>
+				</div>
+				<div class="column">
+					<h3>💰 買車從「負資產」升級「印鈔機」</h3>
+					<p>
+						車輛自駕化開啟了「資產活化」的全新可能。您的車輛不再只是停在車庫的折舊消耗品。 Tesla
+						計畫2026年推出Cybercab車款並在美國數個大城市上線無人計程車Robotaxi
+						服務，也承諾購買車輛的車主可在完全自動駕駛實現後，將車輛加入Robotaxi 網絡出租。
+					</p>
+					<p>
+						這樣一來若您選擇將閒置車輛加入共享車隊，您就可以搖身一變成為車行老闆，由 AI
+						司機出門為您自動賺取收益。 這種「車輛即服務」(VaaS) 的模式，將徹底顛覆了汽車資產的財務價值。
+					</p>
+
+					<!-- 圖片範例 -->
+					<!-- 請將 src 中的 "your-image-path-2.jpg" 替換成您的圖片路徑 -->
+					<img
+						src="profit.jpg"
+						alt="圖片說明" />
+
+					<h3>🚀 智慧移動時代，我們都是參與者</h3>
+
+					<p>
+						當前汽車產業正在經歷電動化、自駕化、聯網化與共享化的過程，隨著 AI、IOT
+						等軟硬體技術逐漸成熟，自駕車的普及發展將是不可擋的趨勢。在各家競逐的自駕車技術足夠進步之時，我們買車後能夠不親自開車，而如同擁有一位專屬司機來服務。
+					</p>
+					<p>
+						若有天您在街上看到 Robotaxi 普及營運時，證明相關技術已跨越政府安全性的監管門檻，AI
+						司機已經可靠上路。屆時，您的愛車將不再是只折舊的消耗品，也能是閒置時能自動營運持續賺進收益的資產。
+					</p>
+					<p>
+						這場「智慧移動」革命，將重塑人類的出行體驗，大幅提升時間與空間的利用效益並帶來更便利的生活。您準備好讓
+						AI 司機接手方向盤了嗎？
+					</p>
+
+					<img
+						src="v2x.jpg"
+						alt="圖片說明" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
